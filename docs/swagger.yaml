@@ -1,0 +1,143 @@
+definitions:
+  auth.Account:
+    properties:
+      password:
+        type: string
+      remember:
+        type: boolean
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  auth.LoginResponse:
+    properties:
+      code:
+        type: integer
+      data:
+        properties:
+          access_token:
+            type: string
+          expire:
+            type: string
+        type: object
+      message:
+        type: string
+      version:
+        type: string
+    type: object
+  collections.LogRecord:
+    properties:
+      content_type:
+        type: string
+      created_at:
+        type: string
+      ip:
+        type: string
+      latency:
+        type: string
+      method:
+        type: string
+      prefer_url:
+        type: string
+      request:
+        type: string
+      request_id:
+        type: string
+      response:
+        type: string
+      status_code:
+        type: integer
+      updated_at:
+        type: string
+      uri:
+        type: string
+      user_agent:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v1/admin/logs:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/collections.LogRecord'
+            type: array
+      summary: Lấy danh sách bản ghi log
+      tags:
+      - monitor
+  /api/v1/admin/profile:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses: {}
+      summary: lấy thông tin profile đang login
+      tags:
+      - user
+  /api/v1/admin/provinces:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses: {}
+      summary: lấy danh sách tỉnh thành
+      tags:
+      - user
+  /api/v1/admin/provinces/{{province_id}}:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses: {}
+      summary: lấy thông tin chi tiết của tỉnh thành
+      tags:
+      - user
+    post:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses: {}
+      summary: cập nhật thông tin tỉnh thành
+      tags:
+      - user
+  /api/v1/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Đăng nhập hệ thôống CMS, lấy về access_token
+      parameters:
+      - description: username password
+        in: body
+        name: LoginForm
+        required: true
+        schema:
+          $ref: '#/definitions/auth.Account'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/auth.LoginResponse'
+      summary: Đăng nhập CMS
+      tags:
+      - user
+swagger: "2.0"

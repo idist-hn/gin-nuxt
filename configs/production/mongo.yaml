@@ -1,0 +1,8 @@
+mongo:
+  timeout: 10
+  host: mongo
+  port: 27017
+  username: admin
+  password: ptit2023
+  database: portal
+  authSource: admin

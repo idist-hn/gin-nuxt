@@ -1,0 +1,8 @@
+mongo:
+  timeout: 10
+  host: localhost
+  port: 27017
+  username:
+  password:
+  database: portal
+  authSource: admin

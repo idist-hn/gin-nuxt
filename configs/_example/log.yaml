@@ -1,0 +1,10 @@
+log:
+  level: debug
+  request:
+    file: true
+    console: true
+    db: true
+  query:
+    detail: false
+  methods:
+    get: true
