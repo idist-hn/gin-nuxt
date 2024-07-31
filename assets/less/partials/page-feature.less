@@ -1,0 +1,73 @@
+.echart-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  background: linear-gradient(135deg, #fff, #ffebeb, #ffebeb);
+  border-radius: 10px;
+  position: relative;
+
+
+  .card-bar-chart {
+    display: flex;
+
+    h1 {
+      margin-right: 5px;
+    }
+  }
+
+  & .echart-card-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52px;
+    height: 52px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+  }
+
+  .ant-card-body {
+    padding: 16px !important;
+    width: 100%;
+  }
+
+  .card-chunk {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .growth-upward {
+    color: #20c997;
+
+    svg {
+      color: #20c997;
+    }
+  }
+
+  .growth-downward {
+    color: #ff4d4f;
+
+    svg {
+      color: #ff4d4f;
+    }
+  }
+
+  @media only screen and (max-width: 379px) {
+    .card-chunk {
+      width: 100%;
+      flex: 0 0 100%;
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin: 5px 0 20px 0;
+      }
+    }
+  }
+
+  .chartjs-tooltip {
+    min-width: 132px !important;
+  }
+}

@@ -1,0 +1,40 @@
+.ck-editor {
+  .ck.ck-toolbar {
+    border: 1px solid rgb(241, 242, 246);
+  }
+
+  .ck.ck-editor__main {
+    > .ck-editor__editable {
+      &:not(.ck-focused) {
+        border-color: rgb(241, 242, 246);
+      }
+
+      min-height: 500px;
+      max-height: 1500px;
+    }
+  }
+
+  .table {
+    display: flex !important;
+  }
+}
+
+.cke_reset {
+  min-height: 500px;
+  max-height: 800px;
+}
+
+
+.ckeditor-container {
+  position: relative;
+
+  .ckeditor-info {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+
+    .ant-tag {
+      zoom: .8;
+    }
+  }
+}

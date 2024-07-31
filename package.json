@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@ant-design-vue/nuxt": "^1.4.1",
+    "@formkit/auto-animate": "^0.8.1",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/device": "^3.1.1",
+    "@nuxtjs/i18n": "^8.0.0-rc.11",
+    "@pinia/nuxt": "^0.5.1",
+    "less": "^4.2.0",
+    "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.7",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@ckeditor/ckeditor5-vue": "^5.1.0",
+    "@idist/ckeditor5-build": "^32.0.0",
+    "ant-design-vue": "^4.1.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "feather-icons": "^4.29.1",
+    "filepond-plugin-file-validate-type": "^1.2.8",
+    "filepond-plugin-image-preview": "^4.6.12",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "unplugin-vue-components": "^0.26.0",
+    "vue-filepond": "^7.0.4",
+    "vue3-perfect-scrollbar": "^1.6.1",
+    "vue3-toastify": "^0.2.1",
+    "vuedraggable": "^4.1.0"
+  }
+}

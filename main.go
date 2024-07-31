@@ -13,6 +13,7 @@ import (
 	"idist-core/app/providers/routerProvider"
 	"idist-core/app/providers/socketProvider"
 	"os"
+	"os/exec"
 )
 
 func main() {
@@ -43,11 +44,22 @@ func main() {
 	buildBatch := "Version: " + configProvider.GetConfig().GetString("app.server.version") + "\n" + "Branch: " + configProvider.GetConfig().GetString("app.server.branch")
 
 	notify.Notify("Portal API CMS", "Building success", buildBatch, "")
+
+	go func() {
+		loggerProvider.GetLogger().Info("Starting Frontend...")
+		cmd := exec.Command("npm", "run", "dev")
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		if err := cmd.Run(); err != nil {
+			loggerProvider.GetLogger().Error("Frontend failed to start")
+		} else {
+			loggerProvider.GetLogger().Info("Frontend started")
+		}
+	}()
 	if err := r.Run(fmt.Sprintf("%s:%s",
 		configProvider.GetConfig().GetString("app.server.host"),
 		configProvider.GetConfig().GetString("app.server.port"))); err != nil {
 		loggerProvider.GetLogger().Error(err.Error())
 	}
 
-	notify.Notify("Start Frontend", "Building success", buildBatch, "")
 }
