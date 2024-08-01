@@ -70,7 +70,7 @@ func Init() {
 		loggerProvider.GetLogger().Info("Mongo: Lỗi kết nối")
 		panic(err)
 	} else {
-		loggerProvider.GetLogger().Info("Mongo: Kết nối thành công")
+		loggerProvider.GetLogger().Info("Mongo: Khởi tạo kết nối thành công")
 		err = client.Ping(ctx, readpref.Primary())
 		if err != nil {
 			loggerProvider.GetLogger().Info("Mongo: Ping không thành công", zap.Error(err), zap.String("Mongo uri:", uri))

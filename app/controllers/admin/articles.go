@@ -11,7 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"idist-core/app/collections"
 	"idist-core/app/controllers"
-	"idist-core/helpers"
+	"idist-core/app/helpers"
 	"net/http"
 )
 
