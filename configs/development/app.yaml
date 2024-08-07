@@ -10,7 +10,10 @@ app:
     log: true
     domain: http://cms.test
     media: http://cms.test
-    version: 2024.08.01.12.50
-    branch: main[c0091005cbc229e3fc42c8a06586b0d51e610d39]
+    version: 2024.08.07.17.05
+    branch: refactoring[939e8f7c4757feba8141c683a26ea611dc0aea5d]
+  frontend:
+    enable: true
+    environment: development
 role:
   admin_id: 6180f9624652255c7f18c206

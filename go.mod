@@ -1,6 +1,6 @@
 module idist-core
 
-go 1.22.2
+go 1.22.5
 
 require (
 	github.com/appleboy/gin-jwt/v2 v2.9.2

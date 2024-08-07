@@ -27,7 +27,7 @@ func AuthMiddleware() *jwt.GinJWTMiddleware {
 		TokenHeadName:   "Bearer",
 		CookieName:      "access_token",
 		TimeFunc:        time.Now,
-		SecureCookie:    true,
+		SecureCookie:    false,
 		CookieHTTPOnly:  false,
 		SendCookie:      true,
 		PayloadFunc:     auth.PayloadFunc,

@@ -110,6 +110,7 @@ export default {
       } else if (response && response.code === 200) {
         this.message = "Login success";
         await this.$toast("Đăng nhập thành công", {autoClose: 5000, type: "success"});
+        console.log("starting redirect")
         await this.$router.push({name: "admin-homepage"});
 
       } else {

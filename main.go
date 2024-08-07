@@ -13,6 +13,7 @@ import (
 	"idist-core/app/providers/routerProvider"
 	"idist-core/app/providers/socketProvider"
 	"os"
+	"os/exec"
 )
 
 func main() {
@@ -44,17 +45,25 @@ func main() {
 
 	notify.Notify("Idist's Boilerplate CMS", "Building success", buildBatch, "")
 
-	//go func() {
-	//	loggerProvider.GetLogger().Info("Starting Frontend...")
-	//	cmd := exec.Command("npm", "run", "dev")
-	//	cmd.Stdout = os.Stdout
-	//	cmd.Stderr = os.Stderr
-	//	if err := cmd.Run(); err != nil {
-	//		loggerProvider.GetLogger().Error("Frontend failed to start")
-	//	} else {
-	//		loggerProvider.GetLogger().Info("Frontend started")
-	//	}
-	//}()
+	if configProvider.GetConfig().GetBool("app.frontend.enable") {
+		go func() {
+			loggerProvider.GetLogger().Info("Starting module frontend...")
+			cmd := exec.Command("echo", buildBatch)
+			if configProvider.GetConfig().GetString("app.frontend.environment") == "production" {
+				cmd = exec.Command("npm", "start")
+			} else {
+				cmd = exec.Command("npm", "run", "dev")
+			}
+			cmd.Stdout = os.Stdout
+			cmd.Stderr = os.Stderr
+			if err := cmd.Run(); err != nil {
+				loggerProvider.GetLogger().Error("Frontend failed to start")
+			} else {
+				loggerProvider.GetLogger().Info("Frontend started")
+			}
+		}()
+	}
+
 	if err := r.Run(fmt.Sprintf("%s:%s",
 		configProvider.GetConfig().GetString("app.server.host"),
 		configProvider.GetConfig().GetString("app.server.port"))); err != nil {
