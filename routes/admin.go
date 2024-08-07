@@ -145,4 +145,7 @@ func AdminRoutes(router *gin.RouterGroup) {
 	router.GET("/templates/:id", middlewares.Gate("templates", "read"), admin.GetTemplate)
 	router.PUT("/templates/:id", middlewares.Gate("templates", "update"), admin.UpdateTemplate)
 	router.DELETE("/templates/:id", middlewares.Gate("templates", "delete"), admin.DeleteTemplate)
+
+	// Test Upload Files
+	router.POST("/uploads", middlewares.Gate("tests", "uploads"), admin.PostUploadFile)
 }
