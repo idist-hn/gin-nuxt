@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import api from "~/api/index.js";
+import api from "~/routes/index.js";
 import {toast} from "vue3-toastify";
 
 export const useTemplateStore = defineStore('templates', {

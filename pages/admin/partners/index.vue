@@ -61,7 +61,7 @@
 <script>
 import list from "~/mixins/list";
 import {usePartnerStore} from "~/stores/partners.js";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "list",

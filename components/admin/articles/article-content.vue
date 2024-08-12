@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import RichEditor from "~/composables/RichEditor.vue";
+import RichEditor from "~/components/commons/RichEditor.vue";
 
 export default {
   name: 'ArticleContent',

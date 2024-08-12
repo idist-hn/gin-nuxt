@@ -2,7 +2,7 @@
   <a-card headless class="profile-author-box">
     <div class="author-info">
       <figure>
-        <img :src="require('~/assets/images/no-image.png')" alt="" width="120" />
+        <img :src="require('assets/images/no-image.png')" alt="" width="120" />
         <a-upload :action="getLinkUploadAvatar()" />
       </figure>
       <figcaption>

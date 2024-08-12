@@ -29,7 +29,7 @@
 
 import DepartmentStyleKey from "~/components/admin/departments/department-style-key.vue";
 import DepartmentStyleValue from "~/components/admin/departments/department-style-value.vue";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "DepartmentMobileStyle",

@@ -15,7 +15,7 @@
   </a-row>
 </template>
 <script>
-import HomepageCategories from "~/content/homepage/homepage-categories.vue";
+import HomepageCategories from "~/components/admin/homepage/homepage-categories.vue";
 
 export default {
   name: "Homepage",

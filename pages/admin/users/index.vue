@@ -69,7 +69,7 @@
 
 <script>
 import list from "~/mixins/list";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
 import {useUsersStore} from "~/stores/users.js";
 
 export default {

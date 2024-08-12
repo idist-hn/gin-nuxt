@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {theme} from "./utils/themeVariables";
+import {theme} from "./configs/development/themeVariables";
 
 // @ts-ignore
 export default defineNuxtConfig({
@@ -28,10 +28,6 @@ export default defineNuxtConfig({
     },
     app: {
         baseURL: process.env.BASE_URL || "/",
-        // pageTransition: {
-        //     mode: "out-in",
-        //     name: "fade",
-        // },
         head: {
             title: "PTIT-CMS",
             htmlAttrs: {

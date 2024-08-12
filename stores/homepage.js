@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import api from "~/api/index.js";
+import api from "~/routes/index.js";
 
 export const useHomepageStore = defineStore('homepage', {
     state: () => ({
