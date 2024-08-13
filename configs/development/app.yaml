@@ -10,7 +10,7 @@ app:
     log: true
     domain: http://cms.test
     media: http://cms.test
-    version: 2024.07.31.23.08
-    branch: main[3e12536d7f47a497da1fc33d6c0a87474943d032]
+    version: 2024.08.13.22.37
+    branch: main[c0091005cbc229e3fc42c8a06586b0d51e610d39]
 role:
   admin_id: 6180f9624652255c7f18c206
