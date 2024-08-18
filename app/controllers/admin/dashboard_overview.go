@@ -9,7 +9,7 @@ import (
 	"idist-core/app/collections"
 	"idist-core/app/const/response"
 	"idist-core/app/controllers"
-	"idist-core/helpers"
+	"idist-core/app/helpers"
 	"net/http"
 )
 

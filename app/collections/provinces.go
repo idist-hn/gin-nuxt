@@ -4,7 +4,7 @@ import (
 	"context"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"idist-core/helpers"
+	"idist-core/app/helpers"
 	"sync"
 	"time"
 )

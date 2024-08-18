@@ -5,7 +5,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"idist-core/helpers"
+	helpers2 "idist-core/app/helpers"
 	"time"
 )
 
@@ -71,7 +71,7 @@ func (u *Partner) First(filter interface{}) error {
 func (u *Partner) Update() error {
 	ctx, cancel := context.WithTimeout(context.Background(), QueryTimeOut)
 	defer cancel()
-	u.UpdatedAt = helpers.Now()
+	u.UpdatedAt = helpers2.Now()
 	if _, err := DB().Collection(u.CollectionName()).UpdateOne(ctx, bson.M{"_id": u.ID}, bson.M{
 		"$set": u,
 	}, options.Update()); err != nil {
@@ -84,7 +84,7 @@ func (u *Partner) Update() error {
 func (u *Partner) Delete() error {
 	ctx, cancel := context.WithTimeout(context.Background(), QueryTimeOut)
 	defer cancel()
-	u.DeletedAt = helpers.PNow()
+	u.DeletedAt = helpers2.PNow()
 	if _, err := DB().Collection(u.CollectionName()).UpdateOne(ctx, bson.M{"_id": u.ID}, bson.M{
 		"$set": u,
 	}, options.Update()); err != nil {
@@ -108,9 +108,9 @@ func (u *Partner) Create() error {
 	ctx, cancel := context.WithTimeout(context.Background(), QueryTimeOut)
 	defer cancel()
 	u.ID = primitive.NewObjectID()
-	u.Slug = helpers.MakeSlug(u.Name)
-	u.CreatedAt = helpers.Now()
-	u.UpdatedAt = helpers.Now()
+	u.Slug = helpers2.MakeSlug(u.Name)
+	u.CreatedAt = helpers2.Now()
+	u.UpdatedAt = helpers2.Now()
 	if _, err := DB().Collection(u.CollectionName()).InsertOne(ctx, u); err != nil {
 		return err
 	} else {
