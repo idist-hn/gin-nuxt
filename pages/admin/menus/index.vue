@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import {useMenuStore} from "~/stores/menus.js";
 import list from "~/mixins/list";
 import {useTagStore} from "~/stores/tags.js";

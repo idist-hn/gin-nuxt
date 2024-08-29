@@ -58,7 +58,7 @@
 <script>
 import list from "~/mixins/list";
 import {useDepartmentStore} from "~/stores/departments.js";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "list",

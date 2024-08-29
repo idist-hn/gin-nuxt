@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import {mapState} from 'pinia'
 import {useLayoutStore} from '~/stores/layout'
 export default {

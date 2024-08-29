@@ -115,7 +115,7 @@
 
 <script>
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: 'header-message',

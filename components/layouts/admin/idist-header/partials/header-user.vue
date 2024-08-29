@@ -32,7 +32,7 @@
 
 <script>
 
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import {useProfileStore} from '~/stores/profile'
 import {mapState} from 'pinia'
 export default {

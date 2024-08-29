@@ -46,7 +46,7 @@
 <script>
 import draggable from 'vuedraggable';
 import MenuItemDetail from "~/components/admin/menus/menu-item-detail.vue";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "MenuTreeItems",

@@ -37,7 +37,7 @@
 
 <script>
 import {useHomepageStore} from "~/stores/homepage.js";
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "HomepageCategories",

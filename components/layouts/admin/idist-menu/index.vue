@@ -26,7 +26,7 @@
 import {PerfectScrollbar} from 'vue3-perfect-scrollbar'
 import AsideItems from './items.vue'
 import Layout from "ant-design-vue"
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 
 import {mapState} from 'pinia'

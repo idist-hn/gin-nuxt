@@ -72,7 +72,7 @@
   </a-card>
 </template>
 <script>
-import IdistFeatherIcons from "~/composables/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import list from "~/mixins/list"
 import {useArticleStore} from '~/stores/articles'
 
