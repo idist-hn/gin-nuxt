@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import list from '~/mixins/list';
 import {useCategoryStore} from "~/stores/categories.js";
 import {useTagStore} from "~/stores/tags.js";

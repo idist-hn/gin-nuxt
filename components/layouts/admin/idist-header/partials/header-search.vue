@@ -36,7 +36,7 @@
 
 import {mapState} from 'pinia'
 import {useLayoutStore} from '~/stores/layout'
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 export default {
   name: "header-search",
   components: {IdistFeatherIcons},

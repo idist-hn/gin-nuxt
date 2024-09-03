@@ -3,13 +3,13 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"idist-core/app/controllers/admin"
-	"idist-core/app/middlewares"
+	"idist-core/middleware"
 )
 
 func CommonRoutes(router *gin.RouterGroup) {
-	router.GET("/provinces", middlewares.Gate("", ""), admin.ListProvinces)
-	router.GET("/provinces/id", middlewares.Gate("", ""), admin.ReadProvince)
-	router.PUT("/provinces/id", middlewares.Gate("", ""), admin.UpdateProvince)
+	router.GET("/provinces", middleware.Gate("", ""), admin.ListProvinces)
+	router.GET("/provinces/id", middleware.Gate("", ""), admin.ReadProvince)
+	router.PUT("/provinces/id", middleware.Gate("", ""), admin.UpdateProvince)
 
-	router.POST("/tuyen-sinh", middlewares.Gate("", ""), admin.CreateTuyenSinh)
+	router.POST("/tuyen-sinh", middleware.Gate("", ""), admin.CreateTuyenSinh)
 }

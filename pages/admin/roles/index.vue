@@ -64,7 +64,7 @@
 
 <script>
 import list from "~/mixins/list";
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import {useRolesStore} from "~/stores/roles.js";
 
 export default {
