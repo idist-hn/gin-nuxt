@@ -46,6 +46,8 @@ func main() {
 	notify.Notify("Idist's Boilerplate CMS", "Building success", buildBatch, "")
 
 	if configProvider.GetConfig().GetBool("app.frontend.enable") {
+		// Kill Port before
+
 		go func() {
 			loggerProvider.GetLogger().Info("Starting module frontend...")
 			cmd := exec.Command("echo", buildBatch)

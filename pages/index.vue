@@ -1,19 +1,22 @@
 <template>
     <a-row :gutter="16">
-
+      <a-col :md="12" :sm="24">
+        <a-card title="Card title">
+          <p>Card content</p>
+          <p>Card content</p>
+          <p>Card content</p>
+        </a-card>
+      </a-col>
     </a-row>
 </template>
 <script>
-import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: 'index',
-  layout: 'default',
+  layout: 'common',
   components: {
-    IdistFeatherIcons
   },
   mounted() {
-    this.$router.push({name:'admin-homepage'})
   }
 }
 </script>
