@@ -1,6 +1,8 @@
 <template>
     <layout id="web-layout">
-        <slot/>
+      <div class="web-content">
+      <slot/>
+      </div>
     </layout>
 </template>
 
@@ -19,9 +21,8 @@ export default {
   name: `DefaultLayout`,
   components: {AuthHelper, AuthFooter, AuthHeader, Layout, Content},
   head: {
-    title: "CMS PTIT",
+    title: "CIE PTIT",
   },
-  middleware: ["authenticated"],
   data: () => ({}),
   computed: {
     ...mapState(useLayoutStore, ['theme']),
@@ -39,10 +40,7 @@ export default {
     }
   },
   mounted() {
-    console.log("Start admin layout");
-    console.log("start get profile");
-    // this.$store.dispatch("users/GetProfile");
-    console.log("finish get profile");
+    console.log("Start common layout");
   },
 };
 </script>
