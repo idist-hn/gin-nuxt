@@ -62,7 +62,7 @@
 <script>
 import list from "~/mixins/list";
 import {useTagStore} from "~/stores/tags.js";
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "list",

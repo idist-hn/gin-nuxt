@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import api from "~/routes/index.js";
+import api from "~/routes/api.js";
 import {toast} from "vue3-toastify";
 
 export const useDepartmentStore = defineStore('departments', {

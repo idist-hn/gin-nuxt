@@ -24,7 +24,7 @@
 
 <script>
 import {now} from "lodash";
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 
 export default {
   name: "DepartmentExtra",

@@ -45,7 +45,7 @@
 import ToggleMenu from './partials/toggle-menu.vue'
 import HeaderLogo from '~/components/layouts/admin/idist-header/partials/header-logo.vue'
 import HeaderSearch from '~/components/layouts/admin/idist-header/partials/header-search.vue'
-import IdistFeatherIcons from "~/components/commons/IdistFeatherIcons.vue";
+import IdistFeatherIcons from "/components/commons/IdistFeatherIcons.vue";
 import AuthInfo from "~/components/layouts/admin/idist-header/partials/auth-info.vue";
 
 export default {
