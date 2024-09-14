@@ -1,8 +1,8 @@
 mongo:
   timeout: 10
-  host: 192.168.1.11
+  host: localhost
   port: 27017
-  username: admin
-  password: admin
+  username:
+  password:
   database: portal
   authSource: admin
