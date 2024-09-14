@@ -1,5 +1,5 @@
 <template>
-  <i :class="classes" v-html="activity()" style="line-height: 0"> </i>
+  <i :class="'feather-icon ' + classes" v-html="activity()" style="line-height: 0"> </i>
 </template>
 
 <script>

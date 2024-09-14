@@ -39,6 +39,7 @@ let config = {
     ListMenus: "/api/v1/admin/menus",
     CreateMenu: "/api/v1/admin/menus",
     GetMenu: "/api/v1/admin/menus/{id}",
+
     UpdateMenu: "/api/v1/admin/menus/{id}",
     DeleteMenu: "/api/v1/admin/menus/{id}",
 
@@ -131,6 +132,9 @@ let config = {
     UpdateTemplate: "/api/v1/admin/templates/{id}",
     DeleteTemplate: "/api/v1/admin/templates/{id}",
 
+
+    // Public APi
+    GetSubMenu: "/api/v1/cie/sub-menu",
 };
 
 let api = new Proxy(config, {
@@ -148,6 +152,10 @@ api.params = (name, parameters) => {
         let endpoint = api[name];
         for (let value in parameters) {
             endpoint = endpoint.replace(`{${value}}`, parameters[value]);
+        }
+
+        if (parameters.query) {
+            endpoint = `${endpoint}?${new URLSearchParams(parameters.query).toString()}`;
         }
         return endpoint;
     } catch (e) {

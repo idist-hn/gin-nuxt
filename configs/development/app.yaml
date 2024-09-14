@@ -10,8 +10,8 @@ app:
     log: true
     domain: http://cms.test
     media: http://cms.test
-    version: 2024.09.05.06.18
-    branch: refactoring[0d80d1d399f2316b5f83fa20a1375078829642e5]
+    version: 2024.09.14.16.25
+    branch: refactoring[15c8e3e9d1d02280a7b891fc49691dc636d02040]
   frontend:
     enable: true
     environment: development

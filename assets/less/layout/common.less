@@ -1,13 +1,40 @@
 #web-layout {
-  //background: #F0F2F5;
-  //min-height: 100vh;
-  //display: flex;
-  //flex-direction: column;
-  //overflow: hidden;
-  //position: relative;
-  //
-  //.web-content {
-  //  flex: 1 1 auto;
-  //}
+  background: #F0F2F5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 
+  .feather-icon {
+      display:flex
+      }
+    .web-content {
+       flex: 1 1 auto;
+    }
+    .container {
+        padding: 0 12px;
+        max-width: 1300px;
+    }
+
+    .sub-menu {
+        background: rgba(0, 19, 55, 1);
+        color:white;
+        display: flex;
+        padding: 6px 68px;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-item {
+            margin-right: 20px;
+            cursor: pointer;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            &:hover a {
+                color: #FFC107;
+            }
+        }
+    }
 }

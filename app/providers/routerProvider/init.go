@@ -23,7 +23,7 @@ func Init(router *gin.Engine) {
 	api := router.Group("api/v1")
 	routes.AdminRoutes(api.Group("admin"))
 	routes.AuthRoutes(api.Group("auth"))
-	routes.CommonRoutes(api.Group("common"))
+	routes.CommonRoutes(api.Group("cie"))
 	loggerProvider.GetLogger().Info("------------------------------------------------------------")
 
 }

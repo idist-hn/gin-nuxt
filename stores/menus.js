@@ -79,5 +79,26 @@ export const useMenuStore = defineStore('menus', {
             });
             return response;
         },
+
+        // Methods for Common
+
+        async GetSubMenuEntry() {
+            let response = null;
+            let filter = {
+                language: "vn",
+                status: "active",
+            }
+            await fetch(api.params("GetSubMenu", {query: filter}), {
+                method: "GET",
+
+            }).then((res) => res.json()).then((data) => {
+                if (data.error !== undefined) {
+                    toast.error(data.message);
+                }
+                response = data;
+                console.log(data)
+            });
+            return response;
+        },
     },
 })
