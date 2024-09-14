@@ -23,7 +23,7 @@ export default {
   setup() {
     definePageMeta({
       layout: "admin",
-      // middleware: "auth",
+      middleware: "auth",
     });
     // nextTick(() => {
     //

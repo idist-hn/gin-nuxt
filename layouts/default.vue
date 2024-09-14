@@ -44,7 +44,7 @@ export default {
     }
   },
   mounted() {
-    console.log("Start admin layout");
+    console.log("Start default layout");
     console.log("start get profile");
     // this.$store.dispatch("users/GetProfile");
     console.log("finish get profile");
